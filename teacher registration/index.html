@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Teacher Registration</h1>
+    <p>Please fill out this form with the required information</p>
+    <form action="https://register-demo.Gurukul-By-Srinjoy.org" method="post">
+        <fieldset>
+            <label for="first-name"> Full Name: <input id="full name" type="text" name="full name" required /></label>
+            <label for="email">Email: <input id="email" type="email" name="email" required /></label>
+            <label for="Tutoring Address"> Current Address: <input id="Tutoring Address" type="text" name="Tutoring Address" required /></label>
+            
+            <label for="new-password"> Tutoring Address: <input id="Current Address" type="text" name="Current Address"  required /></label>
+        </fieldset>
+        <fieldset>
+            <label for="Online Teaching"><input id="Online Teaching" type="radio" name="account-type" class="inline" /> Online Teaching</label>
+            <label for="Offline Teaching"><input id="Offline Teaching" type="radio" name="account-type" class="inline" /> Offline Teaching</label>
+            <label for="terms-and-conditions"><input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" /> I accept the <a href="https://Gurukul-By-Srinjoy.org/news/terms-of-service/">terms and conditions</a></label>
+        </fieldset>
+        
+        <fieldset>
+            <label for="profile-picture">Upload a Profile Picture: <input id="profile-picture" type="file" name="profile-picture" /></label>
+            <label for="profile-picture">Upload your Qualification Certificate: <input id="qualification cirtificate" type="file" name="qualification cirtificate" /></label>
+            <label for="age">Contact Info: <input id="Contact info" type="number" name="Contact Info" /></label>
+            <label for="referrer">Gender
+                <select id="referrer" name="Gender">
+                    <option value="">(select one)</option>
+                    <option value="1"> Male</option>
+                    <option value="2"> Female</option>
+                    
+                    <option value="3">Other</option>
+              </select>
+            </label>
+            <label for="bio">Provide a Bio:
+                <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+            </label>
+        </fieldset>
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>
