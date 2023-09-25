@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="form-title">Registration</h1>
+      <form action="#">
+        <div class="main-user-info">
+          <div class="user-input-box">
+            <label for="fullName">Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              placeholder="Enter Full Name"
+            />
+          </div>
+          <div class="user-input-box">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter Email"
+            />
+          </div>
+          <div class="user-input-box">
+            <label for="contactNumber">Contact Number*</label>
+            <input
+              type="text"
+              id="contactNumber"
+              name="contactNumber"
+              placeholder="Enter Contact Number*"
+            />
+          </div>
+          <div class="user-input-box">
+            <label for="currentAddress">Current Address*</label>
+            <input
+              type="text"
+              id="currentAddress"
+              name="currentAddress"
+              placeholder="Enter Current Address*"
+            />
+          </div>
+          <div class="user-input-box">
+            <label for="qualification">Qualification*</label>
+            <input
+              type="text"
+              id="qualification"
+              name="qualification"
+              placeholder="Qualification*"
+            />
+          </div>
+          <div class="user-input-box">
+            <label for="teacherCheckbox">Are you a teacher?</label>
+            <input
+              type="checkbox"
+              id="teacherCheckbox"
+              name="teacherCheckbox"
+            />
+          </div>
+          <div class="user-input-box" id="guardianFields" style="display: none;">
+            <label for="guardianNumber">Guardian Number</label>
+            <input
+              type="text"
+              id="guardianNumber"
+              name="guardianNumber"
+              placeholder="Enter Guardian Number"
+            />
+          </div>
+        </div>
+        <div class="gender-details-box">
+          <span class="gender-title">Gender</span>
+          <div class="gender-category">
+            <input type="radio" name="gender" id="male" />
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" />
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="other" />
+            <label for="other">Other</label>
+          </div>
+        </div>
+        <!-- Teacher-specific Fields -->
+        <div id="teacherFields" style="display: none;">
+          <div class="user-input-box">
+            <label for="tutoringAddress">Tutoring Address*</label>
+            <input
+              type="text"
+              id="tutoringAddress"
+              name="tutoringAddress"
+              placeholder="Enter Tutoring Address*"
+            />
+          </div>
+          <div class="user-input-box">
+            <label for="qualificationProof">Qualification Proof*</label>
+            <input
+              type="file"
+              id="qualificationProof"
+              name="qualificationProof"
+              accept=".pdf, .doc, .docx"
+            />
+          </div>
+          <div class="user-input-box">
+            <label for="profilePicture">Profile Picture*</label>
+            <input
+              type="file"
+              id="profilePicture"
+              name="profilePicture"
+              accept="image/*"
+            />
+          </div>
+        </div>
+        <div class="form-submit-btn">
+          <input type="submit" value="Register" />
+        </div>
+      </form>
+    </div>
+    <script>
+      // JavaScript to toggle display of student-specific and teacher-specific fields
+      const teacherCheckbox = document.getElementById("teacherCheckbox");
+      const guardianFields = document.getElementById("guardianFields");
+      const teacherFields = document.getElementById("teacherFields");
+
+      teacherCheckbox.addEventListener("change", function () {
+        guardianFields.style.display = !this.checked ? "block" : "none";
+        teacherFields.style.display = this.checked ? "block" : "none";
+      });
+    </script>
+  </body>
+</html>
